@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+.pokeDetailPage__container {
+  width: 100%;
+  max-width: 50em;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10em;
+    border-radius: 0.4em;
+}
+.pokeDetailPge__header {
+  width: 100%;
+  height: 12em;
+  position: relative;
+  border-radius: 0.2em;
+}
+
+.pokeDetailPage__image {
+  position: absolute;
+  width: 20em;
+  top: -7em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.detail__description {
+  display: grid;
+  padding: 30PX 30PX 50PX;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr) ;
+  grid-template-areas: "order order order order"
+                        "name name name name"
+                        "weight weight height height"
+                        "weight- weight- height- height-"
+                        "type type ability ability" 
+                        "type-v type-v ability-1 ability-2";
+}
+.detail__description-order {
+  grid-area: order;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.2em;
+}
+.detail__description-name {
+  grid-area: name;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  margin-top: 1em;
+}
+.detail__description-weight {
+  grid-area: weight;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  text-transform: capitalize;
+  margin-right: 1em;
+}
+.detail__description-weight-value {
+  grid-area: weight-;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+  font-weight: 800;
+}
+.detail__description-height {
+  grid-area: height;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-transform: capitalize;
+  margin-left: 1em;
+}
+.detail__description-height-value {
+  grid-area: height-;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2em;
+  font-weight: 800;
+}
+.detail__description-type {
+  grid-area: type;
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+}
+.detail__description-type-v {
+  grid-area: type-v;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  border-radius: .2em;
+  text-transform: capitalize;
+  border: solid .01em rgb(205, 203, 203);
+  margin-right: .5em;
+}
+
+.detail__description-ability {
+  grid-area: ability;
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+}
+.detail__description-ability-v1 {
+  grid-area: ability-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  border: solid .01em rgb(205, 203, 203);
+  border-radius: .2em;
+  text-transform: capitalize;
+  margin-right: .5em;
+}
+.detail__description-ability-v2 {
+  grid-area: ability-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  border: solid .01em rgb(205, 203, 203);
+  border-radius: .2em;
+  text-transform: capitalize;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+/* .color-grass {
+  background-color: rgb(0, 128, 0);
+  color: white;
+}
+.color-poison {
+  background-color: #5B3184;
+  color: white;
+} */
+
+
+.detail__movements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 5px 30px 50px;
+}
+.detail__movements-name {
+  padding: 30PX 30PX;
+  
+}
+.detail__movements-moves {
+  display: flex;
+  background-color: rgb(239, 234, 234);
+  border-radius: .6em;
+  font-size: 2em;
+  padding: .2em .5em;
+}
+.detail__container-skills {
+  width: 100%;
+  padding: 30PX 30PX 50PX;
+}
+.detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+:root {
+  --bar-color: yellow;
+  --fill-size: 0%;
+}
+.bar {
+  position: relative;
+  height: 20px;
+  background-color: rgb(243, 238, 238);
+}
+.bar::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bar-color);
+  transform: translateX(-100%);
+  animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+}
+@keyframes fill-bar {
+  to {
+    transform: translateX(var(--fill-size));
+  }
+}

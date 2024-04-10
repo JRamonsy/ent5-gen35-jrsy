@@ -1,0 +1,25 @@
+.form__container {
+  display: flex;
+  padding-top: 3em;
+  align-items: center;
+  justify-content: center;
+}
+.form__button {
+  cursor: pointer;
+  background-color: red;
+  &:hover {
+      filter: brightness(1.2);
+    }
+  color: white;
+  border: none;
+  font-size: 2em;
+  margin-left: 0;
+}
+.form__input {
+  box-shadow: -2px 3px 3px grey;
+  height: 3em;
+  border: none;
+  flex: 1;
+  margin-right: 0;
+  
+}
